@@ -1,6 +1,6 @@
 
 
-package Class;
+package Domain;
 
 
 import java.util.ArrayList;

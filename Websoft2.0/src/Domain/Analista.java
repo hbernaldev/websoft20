@@ -1,5 +1,5 @@
 
-package Class;
+package Domain;
 
 import Interface.Irol;
 

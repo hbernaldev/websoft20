@@ -1,5 +1,5 @@
 
-package Class;
+package Domain;
 
 import Interface.Iproyecto;
 import java.util.ArrayList;

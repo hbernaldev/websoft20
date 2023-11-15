@@ -2,8 +2,8 @@
 
 package Interface;
 
-import Class.Proyecto;
-import Class.Trabajador;
+import Domain.Proyecto;
+import Domain.Trabajador;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
