@@ -75,9 +75,9 @@ public class Empresa {
     } 
     
     public static void main(String[] args){
-            Empresa em;
-        em = new  Departamento(DFDFDF, nDFDFD, 45);
-        System.out.println(em.);
+//            Empresa em;
+//        em = new  Departamento(DFDFDF, nDFDFD, 45);
+//        System.out.println(em.);
     
     }
 }
