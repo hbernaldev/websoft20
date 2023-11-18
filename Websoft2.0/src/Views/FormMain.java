@@ -4,6 +4,7 @@
  */
 package Views;
 
+import Services.DepartamentosService;
 /**
  *
  * @author hectoralexisbernalsuarez
@@ -26,50 +27,72 @@ public class FormMain extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jProgressBar1 = new javax.swing.JProgressBar();
         jLabel2 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItemDepartamentos = new javax.swing.JMenuItem();
+        jMenuItemEmpresa = new javax.swing.JMenuItem();
+        jMenuItemRoles = new javax.swing.JMenuItem();
+        jMenuItemEmpleados = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItemProyectos = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Websoft 2.0");
         setPreferredSize(null);
         setResizable(false);
 
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Views/Images/background_project.png"))); // NOI18N
 
         jMenu1.setText("GestionEmpresa");
 
-        jMenuItem1.setText("DatosEmpresa");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItemDepartamentos.setText("Departamentos");
+        jMenuItemDepartamentos.setName("JMenuItemDepartamentos"); // NOI18N
+        jMenuItemDepartamentos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                jMenuItemDepartamentosActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem1);
+        jMenu1.add(jMenuItemDepartamentos);
 
-        jMenuItem2.setText("Departamentos");
-        jMenu1.add(jMenuItem2);
+        jMenuItemEmpresa.setText("Empresa");
+        jMenuItemEmpresa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemEmpresaActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItemEmpresa);
 
-        jMenuItem5.setText("Roles");
-        jMenu1.add(jMenuItem5);
+        jMenuItemRoles.setText("Roles");
+        jMenuItemRoles.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemRolesActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItemRoles);
 
-        jMenuItem4.setText("Empleados");
-        jMenu1.add(jMenuItem4);
+        jMenuItemEmpleados.setText("Empleados");
+        jMenuItemEmpleados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemEmpleadosActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItemEmpleados);
 
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("GestionProyectos");
 
-        jMenuItem3.setText("Proyectos");
-        jMenu2.add(jMenuItem3);
+        jMenuItemProyectos.setText("Proyectos");
+        jMenuItemProyectos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemProyectosActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItemProyectos);
 
         jMenuBar1.add(jMenu2);
 
@@ -97,9 +120,41 @@ public class FormMain extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void jMenuItemEmpresaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEmpresaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+        JDialogEmpresa dialog = new JDialogEmpresa(this,false);
+        dialog.setVisible(true);
+        
+    }//GEN-LAST:event_jMenuItemEmpresaActionPerformed
+
+    private void jMenuItemRolesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemRolesActionPerformed
+        // TODO add your handling code here:
+        JDialogRoles dialog = new JDialogRoles(this,false);
+        dialog.setVisible(true);
+        
+        
+    }//GEN-LAST:event_jMenuItemRolesActionPerformed
+
+    private void jMenuItemDepartamentosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemDepartamentosActionPerformed
+        // TODO add your handling code here:
+        DepartamentosService service = new DepartamentosService();
+        JDialogDepartamento dialog = new JDialogDepartamento(this,false, service);
+        dialog.setVisible(true);
+        
+    }//GEN-LAST:event_jMenuItemDepartamentosActionPerformed
+
+    private void jMenuItemProyectosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemProyectosActionPerformed
+        // TODO add your handling code here:
+        JDialogProyecto dialog = new JDialogProyecto(this,false);
+        dialog.setVisible(true);
+        
+    }//GEN-LAST:event_jMenuItemProyectosActionPerformed
+
+    private void jMenuItemEmpleadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEmpleadosActionPerformed
+        // TODO add your handling code here:
+        JDialogTrabajador dialog = new JDialogTrabajador(this,false);
+        dialog.setVisible(true);
+    }//GEN-LAST:event_jMenuItemEmpleadosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -142,11 +197,10 @@ public class FormMain extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JProgressBar jProgressBar1;
+    private javax.swing.JMenuItem jMenuItemDepartamentos;
+    private javax.swing.JMenuItem jMenuItemEmpleados;
+    private javax.swing.JMenuItem jMenuItemEmpresa;
+    private javax.swing.JMenuItem jMenuItemProyectos;
+    private javax.swing.JMenuItem jMenuItemRoles;
     // End of variables declaration//GEN-END:variables
 }

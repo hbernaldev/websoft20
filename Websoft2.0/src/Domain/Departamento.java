@@ -5,7 +5,8 @@ import Interface.Idepartamento;
 
 
 public class Departamento implements Idepartamento {
-     private String nombre;
+    
+    private String nombre;
     private String especialidad;
     private int cantidadTrabajadores;
 
